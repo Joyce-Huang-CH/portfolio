@@ -34,7 +34,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     MatProgressSpinnerModule,
-    // BrowserAnimationsModule,
     DragDropModule,
   ],
   exports: [
@@ -52,7 +51,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     MatProgressSpinnerModule,
-    // BrowserAnimationsModule,
     DragDropModule,
   ],
 })

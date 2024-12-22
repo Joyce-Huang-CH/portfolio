@@ -4,6 +4,11 @@ import { MatCommonModule } from '@angular/material/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
 
+interface Language {
+  code: string;
+  name: string;
+}
+
 @Component({
   selector: 'app-language-btn',
   standalone: true,
@@ -12,14 +17,21 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './language-btn.component.scss'
 })
 export class LanguageBtnComponent {
-  languages = ['en-US', 'zh-TW'];
+  languages: Language[] = [
+    { code: 'en-US', name: 'English' },
+    { code: 'zh-TW', name: '繁體中文' }
+  ];
 
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('en-US');
     this.translate.use('en-US');
   }
 
-  switchLanguage(language: string) {
-    this.translate.use(language);
+  switchLanguage(langCode: string) {
+    this.translate.use(langCode);
+  }
+
+  getCurrentLanguageName() {
+    return this.languages.find(lang => lang.code === this.translate.currentLang)?.name;
   }
 }

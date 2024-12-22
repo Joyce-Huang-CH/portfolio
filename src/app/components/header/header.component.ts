@@ -10,5 +10,4 @@ import { LanguageBtnComponent } from '../language-btn/language-btn.component';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
 }

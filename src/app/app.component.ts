@@ -21,7 +21,7 @@ export class AppComponent {
   title = 'portfolio';
 
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en-US');  // 設置默認語言
-    translate.use('en-US');  // 使用默認語言
+    translate.setDefaultLang('en-US');
+    translate.use('en-US');
   }
 }

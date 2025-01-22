@@ -1,5 +1,6 @@
 {
   "routes": [
-    "/en-US/"
+    "/en-US/",
+    "/en-US/portfolio"
   ]
 }

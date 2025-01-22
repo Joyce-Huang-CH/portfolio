@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs",
-    "deploy": "ng deploy --base-href=/portfolio/"
+    "predeploy": "ng build",
+    "deploy": "npx angular-cli-ghpages --dir=dist/portfolio/browser/en-US"
   },
   "private": true,
   "dependencies": {

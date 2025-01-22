@@ -18,13 +18,13 @@ interface Language {
 })
 export class LanguageBtnComponent {
   languages: Language[] = [
-    { code: 'en-US', name: 'English' },
-    { code: 'zh-TW', name: '繁體中文' }
+    { code: 'en-us', name: 'English' },
+    { code: 'zh-tw', name: '繁體中文' }
   ];
 
   constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang('en-US');
-    this.translate.use('en-US');
+    this.translate.setDefaultLang('en-us');
+    this.translate.use('en-us');
   }
 
   switchLanguage(langCode: string) {

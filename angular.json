@@ -5,10 +5,10 @@
   "projects": {
     "portfolio": {
       "i18n": {
-        "sourceLocale": "en-US",
+        "sourceLocale": "en-us",
         "locales": {
-        "zh-TW": {
-          "translation": "src/locale/messages.zh-TW.xlf"
+        "zh-tw": {
+          "translation": "src/locale/messages.zh-tw.xlf"
         }
       }
       },

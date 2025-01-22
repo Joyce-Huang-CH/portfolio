@@ -21,7 +21,7 @@ export class CardComponent {
     {
       imageUrl: './assets/img/project-cover/cover-3.png',
       title: 'PROJECTS.SKYWIN.TITLE',
-      tools: ['Vue.js', 'Figma', 'Adobe PS', 'Adobe AI'],
+      tools: ['Vue.js', 'Adobe XD', 'Adobe PS', 'Adobe AI'],
       link: 'https://skywin.app/'
     },
     {

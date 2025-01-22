@@ -46,7 +46,8 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            }
+            },
+            "baseHref": "/portfolio/"
           },
           "configurations": {
             "production": {
@@ -108,6 +109,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

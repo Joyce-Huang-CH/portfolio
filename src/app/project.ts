@@ -1,6 +1,6 @@
 export interface Project {
   imageUrl: string;
   title: string;
-  date: string;
+  tools: string[];
   link: string;
 }

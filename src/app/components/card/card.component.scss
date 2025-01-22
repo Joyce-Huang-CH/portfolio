@@ -1,42 +1,101 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
-  padding: 24px;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  // max-width: 1200px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .project-card {
   height: 100%;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease;
   border: none;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: none;
+
+  .card-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+
+  .overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    .overlay-content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  h2, .tool-chips {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 
+      opacity 0.4s ease,
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover {
+    h2 {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.2s;
+    }
+    
+    .tool-chips {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.3s;
+    }
+  }
+
+  h2 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .tool-chips {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    color: white;
   }
 
   mat-card-image {
     height: 200px;
-    object-fit:contain;
-  }
-
-  mat-card-content {
-    flex-grow: 1;
-    padding: 16px;
-
-    h2 {
-      margin: 0;
-      font-size: 18px;
-      font-weight: 500;
-    }
-
-    p {
-      color: rgba(0, 0, 0, 0.6);
-      margin: 8px 0 0;
-    }
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
   }
 
   mat-card-actions {
@@ -44,4 +103,40 @@
     justify-content: flex-end;
     padding: 8px;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .card-content {
+    transform: translateY(0);
+  }
 }
+
+.tool-chips {
+  padding: 8px 12px;
+  border-radius: 50rem;
+  font-size: 14px;
+  color: black;
+}
+
+// .tool-adobe-xd {
+//   background-color: #FFF3B0;
+// }
+
+// .tool-adobe-ps {
+//   background-color: #E09F3E;
+// }
+
+// .tool-adobe-ai {
+//   background-color: #8DA7BE;
+// }
+
+// .tool-adobe-figma {
+//   background-color: #87919E;
+// }
+
+// .tool-adobe-vue {
+//   background-color: #39393A;
+//   color: white;
+// }

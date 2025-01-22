@@ -1,14 +1,26 @@
 <div class="grid-container">
-  <mat-card class="project-card" *ngFor="let project of projects">
-    <img mat-card-image [src]="project.imageUrl" [alt]="project.title" />
-    <mat-card-content>
-      <h2>{{ project.title }}</h2>
-      <p>{{ project.date }}</p>
-    </mat-card-content>
-    <mat-card-actions>
+  <mat-card class="project-card" *ngFor="let project of projects" (click)="goToLink(project.link)">
+    <div class="card-container">
+      <img mat-card-image [src]="project.imageUrl" [alt]="project.title" />
+      <mat-card-content class="card-content overlay-content">
+        <h2>{{ project.title | translate }}</h2>
+        <ul class="flex gap-1 flex-wrap">
+          <li
+            *ngFor="let tool of project.tools"
+            class="tool-chips"
+          >
+            {{ tool | translate }}
+          </li>
+        </ul>
+        <a mat-icon-button [href]="project.link" target="_blank" class="arrow-icon">
+          <mat-icon>arrow_forward</mat-icon>
+        </a>
+      </mat-card-content>
+    </div>
+    <!-- <mat-card-actions>
       <a mat-icon-button [href]="project.link" target="_blank">
         <mat-icon>arrow_forward</mat-icon>
       </a>
-    </mat-card-actions>
+    </mat-card-actions> -->
   </mat-card>
 </div>

@@ -13,25 +13,25 @@ import { TranslateModule } from '@ngx-translate/core';
 export class CardComponent {
   projects: Project[] = [
     {
-      imageUrl: './assets/img/project-cover/cover-2.png',
+      imageUrl: './assets/img/project-cover/cover-2.webp',
       title: 'PROJECTS.LIGHT_MORNING.TITLE',
       tools: ['Vue.js', 'Figma', 'Adobe PS', 'Adobe AI'],
       link: 'https://light-morning.com/'
     },
     {
-      imageUrl: './assets/img/project-cover/cover-3.png',
+      imageUrl: './assets/img/project-cover/cover-3.webp',
       title: 'PROJECTS.SKYWIN.TITLE',
       tools: ['Vue.js', 'Adobe XD', 'Adobe PS', 'Adobe AI'],
       link: 'https://skywin.app/'
     },
     {
-      imageUrl: './assets/img/project-cover/cover-1.png',
+      imageUrl: './assets/img/project-cover/cover-1.webp',
       title: 'PROJECTS.ROCK_MOBILE.TITLE',
       tools: ['Adobe XD', 'Adobe PS', 'Adobe AI'],
       link: 'https://www.rockmobile.com/index.html'
     },
     {
-      imageUrl: './assets/img/project-cover/cover-4.png',
+      imageUrl: './assets/img/project-cover/cover-4.webp',
       title: 'PROJECTS.CLOUD_WAVE.TITLE',
       tools: ['Vue.js', 'Figma', 'Adobe PS', 'Adobe AI'],
       link: 'https://cloudwave.com.tw/'

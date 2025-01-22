@@ -14,25 +14,25 @@ export class CardComponent {
   projects: Project[] = [
     {
       imageUrl: './assets/img/project-cover/cover-2.webp',
-      title: 'PROJECTS.LIGHT_MORNING.TITLE',
+      title: 'Light-morning Technology Co., Ltd. Official Website',
       tools: ['Vue.js', 'Figma', 'Adobe PS', 'Adobe AI'],
       link: 'https://light-morning.com/'
     },
     {
       imageUrl: './assets/img/project-cover/cover-3.webp',
-      title: 'PROJECTS.SKYWIN.TITLE',
+      title: 'Skywin Technology Co., Ltd. Official Website',
       tools: ['Vue.js', 'Adobe XD', 'Adobe PS', 'Adobe AI'],
       link: 'https://skywin.app/'
     },
     {
       imageUrl: './assets/img/project-cover/cover-1.webp',
-      title: 'PROJECTS.ROCK_MOBILE.TITLE',
+      title: 'Rock Mobile Corporation Official Website',
       tools: ['Adobe XD', 'Adobe PS', 'Adobe AI'],
       link: 'https://www.rockmobile.com/index.html'
     },
     {
       imageUrl: './assets/img/project-cover/cover-4.webp',
-      title: 'PROJECTS.CLOUD_WAVE.TITLE',
+      title: 'Cloud-wave Cloud Co., Ltd. Official Website',
       tools: ['Vue.js', 'Figma', 'Adobe PS', 'Adobe AI'],
       link: 'https://cloudwave.com.tw/'
     }

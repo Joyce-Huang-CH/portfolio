@@ -13,3 +13,16 @@
   // background-color: white;
   padding: 0 1.5rem;
 }
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  
+  .social-icon {
+    color: rgba(255, 255, 255, 0.8);
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

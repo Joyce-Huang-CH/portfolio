@@ -22,8 +22,11 @@ export class AppComponent implements OnInit{
   title = 'portfolio';
 
   constructor(private translate: TranslateService) {
+    translate.addLangs(['en-us', 'zh-tw']);
     translate.setDefaultLang('en-us');
-    translate.use('en-us');
+    
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang?.match(/en-us|zh-tw/) ? browserLang : 'en-us');
   } 
 
   ngOnInit(): void {

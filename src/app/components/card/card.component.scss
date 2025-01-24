@@ -78,12 +78,15 @@
       right: 1.5rem;
       background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(4px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       
       &:hover {
         background: rgba(255, 255, 255, 0.25);
       }
 
-      mat-icon {
+      .mat-icon {
         color: white;
         font-size: 1.25rem;
         height: 1.25rem;
@@ -135,14 +138,14 @@
     color: white;
   }
 
-  mat-card-image {
+  .mat-card-image {
     height: 200px;
     background-size: cover;
     background-position: center;
     z-index: 0;
   }
 
-  mat-card-actions {
+  .mat-card-actions {
     display: flex;
     justify-content: flex-end;
     padding: 8px;
@@ -164,39 +167,35 @@
   color: black;
 }
 
-// .tool-adobe-xd {
-//   background-color: #FFF3B0;
-// }
-
-// .tool-adobe-ps {
-//   background-color: #E09F3E;
-// }
-
-// .tool-adobe-ai {
-//   background-color: #8DA7BE;
-// }
-
-// .tool-adobe-figma {
-//   background-color: #87919E;
-// }
-
-// .tool-adobe-vue {
-//   background-color: #39393A;
-//   color: white;
-// }
-
-
 @media (max-width: 768px) {
-  .overlay-content {
-    padding: 1.5rem;
-    
-    h2 {
-      font-size: 1.25rem;
-    }
+  .project-card {
+    .overlay-content {
+      padding: 1.5rem;
+      gap: 12px;
+      
+      h2 {
+        font-size: 1rem;
+        line-height: 1;
+      }
+  
+      .tool-chips {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.625rem;
+      }
 
-    .tool-chips {
-      font-size: 0.75rem;
-      padding: 0.375rem 0.625rem;
+      .mat-mdc-icon-button.mat-mdc-button-base {
+        width: 2.25rem;
+        height: 2.25rem;
+      }
+      .arrow-icon {
+        .mat-icon {
+          font-size: 1rem;
+          height: 1.25rem;
+          width: 1.25rem;
+          line-height: 1.2rem;
+          overflow: inherit;
+        }
+      }
     }
   }
 }

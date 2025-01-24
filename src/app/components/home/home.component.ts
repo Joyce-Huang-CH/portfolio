@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MaterialModule } from '../../material/material.module';
 import { HeaderComponent } from '../header/header.component';
 import { CardComponent } from '../card/card.component';
-// import { TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { FooterComponent } from "../footer/footer.component";
 
@@ -14,12 +14,12 @@ import { FooterComponent } from "../footer/footer.component";
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  // constructor(private translate: TranslateService) {
-  //   this.translate.setDefaultLang('en-us');
-  //   this.translate.use('en-us');
-  // }
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en-us');
+    this.translate.use('en-us');
+  }
 
-  // switchLanguage(language: string) {
-  //   this.translate.use(language);
-  // }
+  switchLanguage(language: string) {
+    this.translate.use(language);
+  }
 }
